@@ -149,6 +149,7 @@ class _CalculatorState extends State<Calculator> {
               calculatorBatton('+', Colors.teal, Colors.white),
             ],
           ),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -158,6 +159,7 @@ class _CalculatorState extends State<Calculator> {
               calculatorBatton('-', Colors.teal, Colors.white),
             ],
           ),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -167,6 +169,7 @@ class _CalculatorState extends State<Calculator> {
               calculatorBatton('*', Colors.teal, Colors.white),
             ],
           ),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -176,6 +179,7 @@ class _CalculatorState extends State<Calculator> {
               calculatorBatton('/', Colors.teal, Colors.white),
             ],
           ),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
