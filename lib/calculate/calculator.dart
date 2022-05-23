@@ -7,7 +7,7 @@ class Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<Calculator> {
-  String titleApp = 'Калькулятор';
+  String titleApp = 'Калькулятор!';
   double numOne = 0;
   double numTwo = 0;
   dynamic text = '0';
