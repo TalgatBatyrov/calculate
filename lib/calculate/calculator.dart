@@ -1,3 +1,4 @@
+import 'package:calculate/calculate/calculator_batton.dart';
 import 'package:flutter/material.dart';
 
 class Calculator extends StatefulWidget {
@@ -16,7 +17,7 @@ class _CalculatorState extends State<Calculator> {
   dynamic preOpr = '';
   dynamic result = '';
 
-  void calculation(btnText) {
+  void calculation(String btnText) {
     if (btnText == 'A') {
       text = '0';
       numOne = 0;
@@ -105,20 +106,6 @@ class _CalculatorState extends State<Calculator> {
     return result;
   }
 
-// Компонента кнопок
-  Widget calculatorBatton(btnText, btnColor, textColor) {
-    return FloatingActionButton(
-      backgroundColor: btnColor,
-      onPressed: () {
-        calculation(btnText);
-      },
-      child: Text(
-        btnText,
-        style: TextStyle(color: textColor, fontSize: 35),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -143,40 +130,56 @@ class _CalculatorState extends State<Calculator> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              calculatorBatton('1', Colors.blue, Colors.white),
-              calculatorBatton('2', Colors.blue, Colors.white),
-              calculatorBatton('3', Colors.blue, Colors.white),
-              calculatorBatton('+', Colors.teal, Colors.white),
+              CalculatorBatton(
+                  btntxt: '1', btnColor: Colors.blue, onPressed: calculation),
+              CalculatorBatton(
+                  btntxt: '2', btnColor: Colors.blue, onPressed: calculation),
+              CalculatorBatton(
+                  btntxt: '3', btnColor: Colors.blue, onPressed: calculation),
+              CalculatorBatton(
+                  btntxt: '+', btnColor: Colors.teal, onPressed: calculation),
             ],
           ),
           const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              calculatorBatton('4', Colors.blue, Colors.white),
-              calculatorBatton('5', Colors.blue, Colors.white),
-              calculatorBatton('6', Colors.blue, Colors.white),
-              calculatorBatton('-', Colors.teal, Colors.white),
+              CalculatorBatton(
+                  btntxt: '4', btnColor: Colors.blue, onPressed: calculation),
+              CalculatorBatton(
+                  btntxt: '5', btnColor: Colors.blue, onPressed: calculation),
+              CalculatorBatton(
+                  btntxt: '6', btnColor: Colors.blue, onPressed: calculation),
+              CalculatorBatton(
+                  btntxt: '-', btnColor: Colors.teal, onPressed: calculation),
             ],
           ),
           const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              calculatorBatton('7', Colors.blue, Colors.white),
-              calculatorBatton('8', Colors.blue, Colors.white),
-              calculatorBatton('9', Colors.blue, Colors.white),
-              calculatorBatton('*', Colors.teal, Colors.white),
+              CalculatorBatton(
+                  btntxt: '7', btnColor: Colors.blue, onPressed: calculation),
+              CalculatorBatton(
+                  btntxt: '8', btnColor: Colors.blue, onPressed: calculation),
+              CalculatorBatton(
+                  btntxt: '9', btnColor: Colors.blue, onPressed: calculation),
+              CalculatorBatton(
+                  btntxt: '*', btnColor: Colors.teal, onPressed: calculation),
             ],
           ),
           const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              calculatorBatton('A', Colors.red, Colors.white),
-              calculatorBatton('0', Colors.blue, Colors.white),
-              calculatorBatton('.', Colors.red, Colors.white),
-              calculatorBatton('/', Colors.teal, Colors.white),
+              CalculatorBatton(
+                  btntxt: 'A', btnColor: Colors.red, onPressed: calculation),
+              CalculatorBatton(
+                  btntxt: '0', btnColor: Colors.blue, onPressed: calculation),
+              CalculatorBatton(
+                  btntxt: '.', btnColor: Colors.red, onPressed: calculation),
+              CalculatorBatton(
+                  btntxt: '/', btnColor: Colors.teal, onPressed: calculation),
             ],
           ),
           const SizedBox(height: 10),
