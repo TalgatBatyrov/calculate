@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class CalculatorBatton extends StatelessWidget {
+class CalculatorButton extends StatelessWidget {
   final String btntxt;
   final Color btnColor;
   final Function(String) onPressed;
 
-  const CalculatorBatton({
+  const CalculatorButton({
     Key? key,
     required this.btnColor,
     required this.btntxt,

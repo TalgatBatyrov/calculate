@@ -1,4 +1,4 @@
-import 'package:calculate/calculate/calculator_batton.dart';
+import 'package:calculate/calculate/calculator_button.dart';
 import 'package:flutter/material.dart';
 
 class Calculator extends StatefulWidget {
@@ -17,6 +17,7 @@ class _CalculatorState extends State<Calculator> {
   dynamic preOpr = '';
   dynamic result = '';
 
+// main calculation function
   void calculation(String btnText) {
     if (btnText == 'A') {
       text = '0';
@@ -130,13 +131,13 @@ class _CalculatorState extends State<Calculator> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '1', btnColor: Colors.blue, onPressed: calculation),
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '2', btnColor: Colors.blue, onPressed: calculation),
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '3', btnColor: Colors.blue, onPressed: calculation),
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '+', btnColor: Colors.teal, onPressed: calculation),
             ],
           ),
@@ -144,13 +145,13 @@ class _CalculatorState extends State<Calculator> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '4', btnColor: Colors.blue, onPressed: calculation),
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '5', btnColor: Colors.blue, onPressed: calculation),
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '6', btnColor: Colors.blue, onPressed: calculation),
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '-', btnColor: Colors.teal, onPressed: calculation),
             ],
           ),
@@ -158,13 +159,13 @@ class _CalculatorState extends State<Calculator> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '7', btnColor: Colors.blue, onPressed: calculation),
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '8', btnColor: Colors.blue, onPressed: calculation),
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '9', btnColor: Colors.blue, onPressed: calculation),
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '*', btnColor: Colors.teal, onPressed: calculation),
             ],
           ),
@@ -172,13 +173,13 @@ class _CalculatorState extends State<Calculator> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: 'A', btnColor: Colors.red, onPressed: calculation),
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '0', btnColor: Colors.blue, onPressed: calculation),
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '.', btnColor: Colors.red, onPressed: calculation),
-              CalculatorBatton(
+              CalculatorButton(
                   btntxt: '/', btnColor: Colors.teal, onPressed: calculation),
             ],
           ),
